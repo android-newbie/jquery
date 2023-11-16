@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greeting Website</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <style>
+    /* Add any additional styles as needed */
+    h1 {
+      background-color: white; /* Default background color */
+    }
+  </style>
+  
+  <script>
+    $(document).ready(function() {
+      $("#greetButton").on("click", function() {
+        // Assign the "title" attribute value to the text of <h1> tag
+        var titleAttributeValue = $("p").attr("title");
+        $("h1").text(titleAttributeValue);
+
+        // Change the styling attribute value of background color of <h1> to "pink"
+        $("h1").css("background-color", "pink");
+
+        // Set the "src" attribute of <img> tag to "C:/birthday.jpg"
+        $("img").attr("src", "https://picsum.photos/200");
+
+        // Replace the content of <h5> tag with text "XXXX" to "Kevin"
+        $("h5").text("Kevin");
+      });
+    });
+  </script>
+</head>
+<body>
+
+  <p title="Happy Birthday">This is a birthday paragraph.</p>
+  <h1></h1>
+  <img alt="Birthday Image">
+  <h5>XXXX</h5>
+  <button id="greetButton">Greet</button>
+
+
+</body>
+</html>
